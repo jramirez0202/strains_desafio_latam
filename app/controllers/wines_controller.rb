@@ -15,7 +15,7 @@ class WinesController < ApplicationController
   # GET /wines/new
   def new
     @wine = Wine.new
-    @strains = Strain.all
+    @strains = Strain.pluck :name, :id
   end
 
   # GET /wines/1/edit
